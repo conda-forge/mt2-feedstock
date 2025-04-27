@@ -365,6 +365,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@conda-forge/hepmc3](https://github.com/orgs/conda-forge/teams/hepmc3/)
 * [@kratsg](https://github.com/kratsg/)
 * [@lgray](https://github.com/lgray/)
 
