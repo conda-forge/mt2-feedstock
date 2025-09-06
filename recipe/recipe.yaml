@@ -13,18 +13,17 @@ source:
   sha256: 1b4cf30ceb8f925e9bda8abc8cd40f0af8affabdfeeca868231c05d0baa150ed
 
 build:
-  number: 4
+  number: 5
   skip: match(python, "<3.9")
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   build:
     - if: build_platform != target_platform
-      then: python
-    - if: build_platform != target_platform
-      then: cross-python_${{ target_platform }}
-    - if: build_platform != target_platform
-      then: numpy
+      then:
+        - python
+        - cross-python_${{ target_platform }}
+        - numpy
     - ${{ stdlib('c') }}
     - ${{ compiler('c') }}
     - ${{ compiler('cxx') }}
